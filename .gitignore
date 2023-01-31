@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class mcDonalds {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int totaal = 0;
+        int waarde;
+
+
+        do {
+
+        System.out.println("Wat wil bestellen vandaag? 1.Chicken Nuggets Menu 2. Big Mac Menu 3.Mc Flurry 0.Close menu");
+        waarde = sc.nextInt();
+
+
+            switch (waarde) {
+                case 1:
+                    System.out.println("Hoeveel Chicken Nuggets wil je? ($1)");
+                    int hv = sc.nextInt();
+                    totaal = totaal + (hv * 1);
+                    System.out.println(hv+" "+ "Chicken nuggets zijn toegevoegd");
+
+                    break;
+                case 2:
+                    System.out.println("Wil je een (K) Klein $8, (M) Medium ($10),(L) Large ($12)");
+                    char keuze = sc.next().charAt(0);
+
+                    switch (keuze) {
+                        case 'K':
+                            totaal = totaal + 8;
+                            break;
+                        case 'M':
+                            totaal = totaal + 10;
+                            break;
+                        case 'L':
+                            totaal = totaal + 12;
+                            break;
+
+                    }
+                    break;
+                case 3:
+                    System.out.println("Welk soort McFlurry wil je? 1.M&Ms ($4) , 2.Chocolade ($3)");
+                    int keuze1 = sc.nextInt();
+                    switch (keuze1) {
+                        case 1:
+                            totaal = totaal + 4;
+                            System.out.println("M&M McFlurry is toegevoegd");
+                            break;
+                        case 2:
+                            totaal = totaal + 3;
+                            System.out.println("Chocolade McFlurry toegevoegd");
+                            break;
+                    }
+                    break;
+            }
+        } while (waarde != 0);
+        if (waarde == 0) {
+            System.out.println("Gelieve" + " " + totaal + " " + "aan de kassa te beetalen!");
+        }
+    }
+}
