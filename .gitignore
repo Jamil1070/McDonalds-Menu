@@ -10,7 +10,7 @@ public class mcDonalds {
 
         do {
 
-        System.out.println("Wat wil bestellen vandaag? 1.Chicken Nuggets Menu 2. Big Mac Menu 3.Mc Flurry 0.Close menu");
+        System.out.println("Wat wil je vandaag bestellen? 1.Chicken Nuggets Menu 2. Big Mac Menu 3.Mc Flurry 0.Close menu");
         waarde = sc.nextInt();
 
 
@@ -56,7 +56,7 @@ public class mcDonalds {
             }
         } while (waarde != 0);
         if (waarde == 0) {
-            System.out.println("Gelieve" + " " + totaal + " " + "aan de kassa te beetalen!");
+            System.out.println("Gelieve" + " " + totaal + " " + "aan de kassa te betalen!");
         }
     }
 }
